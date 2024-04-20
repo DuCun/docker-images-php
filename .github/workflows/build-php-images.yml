@@ -1,0 +1,71 @@
+name: Build PHP Images
+
+on:
+#  push:
+#    branches: [ main ]
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 12 * * 6'
+
+jobs:
+  build_and_push_php:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        version:
+          - "7.1"
+          - "7.2"
+          - "7.3"
+          - "7.4"
+          - "8.0"
+          - "8.1"
+          - "8.2"
+          - "8.3"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push ${{ matrix.version }}-cli
+        uses: docker/build-push-action@v4
+        with:
+          context: ./php/${{ matrix.version }}-cli
+          push: true
+          tags: |
+            xiaomoy/php:${{ matrix.version }}-cli
+
+      - name: Build and push ${{ matrix.version }}-fpm
+        uses: docker/build-push-action@v4
+        with:
+          context: ./php/${{ matrix.version }}-fpm
+          push: true
+          tags: |
+            xiaomoy/php:${{ matrix.version }}-fpm
+
+      - name: Build and push ${{ matrix.version }}-cli-alpine
+        uses: docker/build-push-action@v4
+        with:
+          context: ./php/${{ matrix.version }}-cli
+          file: ./php/${{ matrix.version }}-cli/Dockerfile-alpine
+          push: true
+          tags: |
+            xiaomoy/php:${{ matrix.version }}-cli-alpine
+
+      - name: Build and push ${{ matrix.version }}-fpm-alpine
+        uses: docker/build-push-action@v4
+        with:
+          context: ./php/${{ matrix.version }}-fpm
+          file: ./php/${{ matrix.version }}-fpm/Dockerfile-alpine
+          push: true
+          tags: |
+            xiaomoy/php:${{ matrix.version }}-fpm-alpine
