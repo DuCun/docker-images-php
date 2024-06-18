@@ -33,6 +33,7 @@ RUN set -eux; \
     pgsql \
     redis \
     sockets \
+    sourceguardian \
     swoole \
     tidy \
     timezonedb \
