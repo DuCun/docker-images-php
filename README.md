@@ -14,9 +14,18 @@ PHP 版本生命周期参考 [PHP 版本支持](https://www.php.net/supported-ve
 
 ## 更新日志
 
-- [2024-06-18] `php8.3` 添加`SourceGuardian`扩展
-- [2023-06-28] 移除 `php7.0` 构建支持，之前构建的镜像依然可以使用，具体原因可以查看 [#763](https://github.com/mlocati/docker-php-extension-installer/pull/763)
-- [2023-12-01] 新增 `php8.3` 构建支持，目前 `imagick` 还不支持该版本
+- [2024-06-21]
+  - 修改 `www-data` 用户 `uid` 和 `gid` 为 `1000`
+  - 去除以 `root` 用户启动 `php-fpm` 的主进程
+
+- [2024-06-18]
+  - `php8.3` 添加 `SourceGuardian` 扩展
+
+- [2023-06-28]
+  - 移除 `php7.0` 构建支持，之前构建的镜像依然可以使用，具体原因可以查看 [#763](https://github.com/mlocati/docker-php-extension-installer/pull/763)
+
+- [2023-12-01]
+  - 新增 `php8.3` 构建支持，目前 `imagick` 还不支持该版本
 
 ## 构建镜像
 
