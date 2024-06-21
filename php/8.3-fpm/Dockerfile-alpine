@@ -45,5 +45,4 @@ RUN set -eux; \
     zip; \
     apk add --no-cache tzdata
 
-EXPOSE 9000
-CMD ["php-fpm", "-R"]
+RUN apk --no-cache add shadow && usermod -u 1000 www-data && groupmod -g 1000 www-data

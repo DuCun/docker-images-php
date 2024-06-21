@@ -45,5 +45,4 @@ RUN set -eux; \
     yaml \
     zip
 
-EXPOSE 9000
-CMD ["php-fpm", "-R"]
+RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
