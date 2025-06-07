@@ -14,6 +14,10 @@ PHP 版本生命周期参考 [PHP 版本支持](https://www.php.net/supported-ve
 
 ## 更新日志
 
+- [2025-06-07]
+  - 新增 `php8.4` 构建支持
+  - `php8.3` 添加 `imagick` 扩展
+
 - [2024-06-21]
   - 修改 `www-data` 用户 `uid` 和 `gid` 为 `1000`
   - 去除以 `root` 用户启动 `php-fpm` 的主进程
