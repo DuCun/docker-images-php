@@ -82,6 +82,11 @@ PHP 版本生命周期参考 [PHP 版本支持](https://www.php.net/supported-ve
     - [`xiaomoy/php:8.3-fpm-alpine`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.3-fpm-alpine)
     - [`xiaomoy/php:8.3-cli`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.3-cli)
     - [`xiaomoy/php:8.3-cli-alpine`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.3-cli-alpine)
+- PHP 8.4
+    - [`xiaomoy/php:8.4-fpm`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-fpm)
+    - [`xiaomoy/php:8.4-fpm-alpine`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-fpm-alpine)
+    - [`xiaomoy/php:8.4-cli`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-cli)
+    - [`xiaomoy/php:8.4-cli-alpine`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-cli-alpine)
 
 ### 辅助镜像
 
@@ -132,6 +137,11 @@ PHP 版本生命周期参考 [PHP 版本支持](https://www.php.net/supported-ve
     - [`xiaomoy/php:8.3-cli-alpine-supervisor`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.3-cli-alpine-supervisor)
     - [`xiaomoy/php:8.3-cli-cron`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.3-cli-cron)
     - [`xiaomoy/php:8.3-cli-alpine-cron`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.3-cli-alpine-cron)
+- PHP 8.4
+    - [`xiaomoy/php:8.4-cli-supervisor`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-cli-supervisor)
+    - [`xiaomoy/php:8.4-cli-alpine-supervisor`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-cli-alpine-supervisor)
+    - [`xiaomoy/php:8.4-cli-cron`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-cli-cron)
+    - [`xiaomoy/php:8.4-cli-alpine-cron`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-cli-alpine-cron)
 
 ## 集成镜像
 
@@ -164,6 +174,9 @@ PHP 版本生命周期参考 [PHP 版本支持](https://www.php.net/supported-ve
 - PHP 8.3
     - [`xiaomoy/php:8.3-integration`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.3-integration)
     - [`xiaomoy/php:8.3-alpine-integration`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.3-alpine-integration)
+- PHP 8.4
+    - [`xiaomoy/php:8.4-integration`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-integration)
+    - [`xiaomoy/php:8.4-alpine-integration`](https://hub.docker.com/r/xiaomoy/php/tags?name=8.4-alpine-integration)
 
 ## 使用镜像
 
